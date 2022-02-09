@@ -1,8 +1,11 @@
 name: barf-env
 channels:
   - conda-forge
-  - pytorch
+  #- nvidia
+  #- pytorch
 dependencies:
+  # Only py39 works for pytorch 1.9.0:
+  - python=3.9.10
   - numpy
   - scipy
   - tqdm
@@ -10,8 +13,10 @@ dependencies:
   - easydict
   - imageio
   - ipdb
-  - pytorch>=1.9.0
-  - torchvision
+  #- cudatoolkit=11.3
+  #- pytorch=1.9.0
+  #- torchvision=0.10.0
+  #- torchaudio=0.9.0
   - tensorboard
   - visdom
   - matplotlib
